@@ -3,11 +3,11 @@
 > **DISCLAIMER: THIS REPO IS FOR EDUCATION PURPOSE ONLY. PLEASE DO NOT MISUSE IT.**
 
 ### What is this?
-It is a implementation of the chain requests made by GTUResults android application. Which can be easily traced with WireShark or any http trcaker. This is the wrapper library to request on GTU's private api servers and get your result information. This is **not any kind of hacking or data stealing**. 
+It is a implementation of the chain requests made by GTUResults [android application](https://play.google.com/store/apps/details?id=com.gtu.result.gturesult). Which can be easily traced with WireShark or any http trcaker. This is the wrapper library to request on GTU's private api servers and get your result information. This is **not any kind of hacking or data stealing**. 
 
 ## Installation
 
-- You can install from [npm registery](https://npmjs.com/).
+- You can install from [npm registery](https://www.npmjs.com/package/gtu-api).
 
 ```sh
 npm install gtu-api
