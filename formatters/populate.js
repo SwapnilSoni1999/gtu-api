@@ -1,4 +1,5 @@
 const subResult = require('./fetchSubject')
+const restructure = require('./restructure')
 
 const populateResult = async (data, enrollment, examId) => {
     data = data[0]
@@ -29,7 +30,7 @@ const populateResult = async (data, enrollment, examId) => {
         }
     }
     data.subjects = subjectResults
-    return data
+    return restructure(data, examId)
 }
 
 module.exports = populateResult
