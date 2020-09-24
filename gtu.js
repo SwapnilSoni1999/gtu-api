@@ -3,6 +3,7 @@ const { default: axios } = require('axios')
 const qs = require('querystring')
 
 const generateDeviceId = require('./utils/deviceId')
+const populateResult = require('./formatters/populate')
 
 class GTUResults {
     constructor() { }
@@ -73,7 +74,15 @@ class GTUResults {
             responseType: 'json'
         })
 
-        return res.data
+        // check if contains json
+        if(res.data == "No Results Found") {
+            return { message: res.data }
+        }
+
+        // formatting data
+        const fullResult = await populateResult(res.data, enrollment, examId)
+
+        return fullResult
     }
 }
 
