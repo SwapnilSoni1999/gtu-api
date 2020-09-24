@@ -33,6 +33,22 @@ class GTUResults {
         })
         return res.data
     }
+
+    static async getExam(examSession, examType) {
+        const data = {
+            'ReqOperation': 'GetExamName',
+            'ExSession': examSession,
+            'ExType': examType
+        }
+        const res = await axios({
+            method: 'POST',
+            url: hostUrl,
+            headers: defaultHeaders,
+            data: qs.stringify(data),
+            responseType: 'json'
+        })
+        return res.data
+    }
 }
 
 module.exports = GTUResults
