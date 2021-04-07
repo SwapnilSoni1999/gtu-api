@@ -1,6 +1,6 @@
 {
   "name": "gtu-api",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Reverse Engineered GTU Results Application.",
   "main": "gtu.js",
   "scripts": {
