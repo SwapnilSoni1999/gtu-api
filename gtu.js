@@ -4,6 +4,7 @@ const qs = require('querystring')
 
 const generateDeviceId = require('./utils/deviceId')
 const populateResult = require('./formatters/populate')
+const getBranchById = require('./utils/branchById')
 
 class GTUResults {
     constructor() { }
@@ -53,6 +54,13 @@ class GTUResults {
         return res.data
     }
 
+    /**
+     * 
+     * @param {string|number} enrollment Your Enrollment number
+     * @param {number} examId exam id from @function getExam
+     * @param {object} options branchBy: 'id' | 'name'
+     * @returns 
+     */
     static async fromEnrollment(enrollment, examId) {
         const data = {
             'ReqOperation': 'StudentResult',
@@ -81,6 +89,7 @@ class GTUResults {
 
         // formatting data
         const fullResult = await populateResult(res.data, enrollment, examId)
+        fullResult.BR_NAME = getBranchById(fullResult.BR_CODE).name
 
         return fullResult
     }
