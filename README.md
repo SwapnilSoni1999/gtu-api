@@ -60,5 +60,5 @@ main()
 ### Legal
 This code is in no way affiliated with, authorized, maintained, sponsored or endorsed by GTU or any of its affiliates or subsidiaries. This is an independent and unofficial module.
 
-## Licesnse
+## License
 &copy; Swapnil Soni | MIT
